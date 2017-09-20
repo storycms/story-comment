@@ -1,0 +1,33 @@
+{
+    "name": "story/comment",
+    "description": "Enable comment in story cms.",
+    "keywords": ["storycms", "storycms-plugin", "comment"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Plugins\\Story\\Comment\\": "src/"
+        }
+    },
+    "extra": {
+        "story": {
+            "providers": [
+                "Plugins\\Story\\Comment\\CommentServiceProvider",
+                "Plugins\\Story\\Comment\\CommentBackendServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
